@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,4 +15,84 @@
 
     <script src="/js/script.js"></script>
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Time Tracking System</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <!-- Leaflet Routing Machine CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        #map {
+            height: 90%;
+            width: 100%;
+        }
+
+        #controls {
+            height: 10%;
+            padding: 5px 20px;
+            background: #f9f9f9;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #distance {
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        input {
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 6px 12px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="controls">
+        Source: <input type="text" id="sourceInput" placeholder="Enter source location">
+        Destination: <input type="text" id="destinationInput" placeholder="Enter destination location">
+        <button id="setRouteBtn">Set Route</button>
+        <span id="distance">Distance: 0 km</span>
+    </div>
+
+    <div id="map"></div>
+
+    <!-- Leaflet JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <!-- Leaflet Routing Machine JS -->
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <!-- Socket.IO -->
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+    <!-- Your JS -->
+    <script src="/js/script.js"></script>
+
+</body>
+
 </html>
